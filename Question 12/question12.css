@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 1. Use Descendant combinator to remove bullet points and text underlining */
+  nav ul li a {
+    text-decoration: none;
+    list-style: none; 
+    color: black; 
+  }
+  
+  /* 2. Use Child combinator to display menu list items inline */
+  nav > ul > li {
+    display: inline; 
+    margin-right: 15px; 
+  }
+  
+  /* 3. Use Adjacent sibling combinator to apply margin between items */
+  nav > ul > li + li {
+    margin-left: 15px; 
+  }
+  
+  /* Add hover effect for better UI */
+  nav ul li a:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+  

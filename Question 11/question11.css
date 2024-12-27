@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Combinator Selectors */
+  /* 1. Change text color of all anchor tags to red */
+  nav a {
+    color: red;
+  }
+  
+  /* 2. Target only the first <h2> tag */
+  header > nav > h2:first-of-type {
+    color: white;
+    background-color: black;
+    padding: 5px;
+  }
+  
+  /* 3. Target the first <p> tag */
+  header > nav > p:first-of-type {
+    color: red;
+  }
+  
+  /* Attribute Selectors */
+  /* 1. Target anchor tags with "href" attribute */
+  a[href] {
+    color: red;
+    text-decoration: none;
+  }
+  
+  /* 2. Target anchor tag with class name "active" */
+  a[class="active"] {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  /* 3. Target anchor tags with target="_self" */
+  a[target="_self"] {
+    background-color: yellow;
+  }
+  
+  /* Pseudo Selectors */
+  /* 1. Target the last <p> tag and add "..." */
+  header > nav > p:last-of-type::after {
+    content: "...";
+  }
+  
+  /* 2. Change the color of bullet points */
+  ul > li::marker {
+    color: green;
+  }
+  
+  /* 3. Target the first letter of the 2nd <p> tag */
+  header > nav > p:nth-of-type(2)::first-letter {
+    color: red;
+    font-size: 30px;
+  }
+  
